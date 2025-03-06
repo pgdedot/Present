@@ -1,0 +1,309 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 60vh; /* Задайте высоту, чтобы центрировать по вертикали */
+
+}
+
+.container2 {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 80vh; /* Задайте высоту, чтобы центрировать по вертикали */
+
+}
+
+body{
+    background-color: rgb(17, 16, 16); /* Черный фон */
+
+
+}
+
+.txt {
+    display: block;
+    color: white;
+    font-size: 60px;
+    margin: 0 auto;
+    z-index: 1000;
+    opacity: 0;
+    animation: txt 1s ease-in-out 0.7s forwards;
+}
+
+.eigh{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: rgba(255, 105, 180, 1); 
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1), 
+                0 0 30px rgba(255, 105, 180, 0.8); 
+    transform: rotate(-45deg);
+    margin-top: 10px; 
+    animation: glow 0.5s infinite alternate;
+}
+
+.eigh:before,
+.eigh:after {
+    content: '';
+    position: absolute;
+    width: 30px; /* Ширина верхних частей сердечка */
+    height: 30px; /* Высота верхних частей сердечка */
+    background-color: rgba(255, 105, 180, 1); /* Полупрозрачный цвет для неонового эффекта */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1), /* Яркий неоновый свет */
+                0 0 30px rgba(255, 105, 180, 0.8); 
+    border-radius: 50%; /* Закругление углов для создания круглой формы */
+}
+
+.eigh:before {
+    top: -15px; /* Положение верхней части сердечка */
+    left: 0;
+}
+
+.eigh:after {
+    left: 15px; /* Положение второй верхней части сердечка */
+    top: 0;
+}
+
+.eigh_big{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.eigh_big:before,
+.eigh_big:after {
+    content: '';
+    position: absolute;
+    width: 40px; /* Ширина верхних частей сердечка */
+    height: 40px; /* Высота верхних частей сердечка */
+    border-radius: 50%; /* Закругление углов для создания круглой формы */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 105, 180, 1), 
+                    0 0 10px rgba(255, 105, 180, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 105, 180, 1), 
+                    0 0 60px rgba(255, 105, 180, 0.6);
+    }
+}
+
+@keyframes txt {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.txt-wrapper{
+    text-align: center;
+}
+
+.wrapepr-flower{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.stebel {
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 0 20px rgb(255, 255, 255), 
+                0 0 30px rgba(255, 255, 255, 0.8); 
+    width: 3px;
+    height: 150px;
+    animation: stebel-grow 1s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0s;
+    z-index: -1;
+    animation-delay: 1.7s;
+  }
+  
+  .petal1 {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 0 20px rgb(255, 255, 255), 
+                0 0 30px rgba(255, 255, 255, 0.8); 
+    border-radius: 100% 100% 0 0;
+    opacity: 0;
+    animation: petal1-appear 1s ease-in-out 2.7s forwards;
+    z-index: 1000000;
+
+  }
+
+  .petal2::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    border-radius: 100%;
+    opacity: 0;
+    animation: petal1-appear 1s ease-in-out 2.7s forwards;
+    top: 10px;
+    left: 20px;
+    z-index: -1000000;
+  }
+  
+  .petal2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 0 20px rgb(255, 255, 255), 
+                0 0 30px rgba(255, 255, 255, 0.8); 
+    border-radius: 100% 100% 0 0;
+    right: 14px;
+    transform: rotate(-65deg);
+    top: 2px;
+    opacity: 0;
+    animation: petal2-appear 1s ease-in-out 2.9s forwards;
+    z-index: 50;
+  }
+  
+  .petal3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 0 20px rgb(255, 255, 255), 
+                0 0 30px rgba(255, 255, 255, 0.8); 
+    border-radius: 100% 100% 0 0;
+    right: -14px;
+    transform: rotate(65deg);
+    top: 2px;
+    opacity: 0;
+    animation: petal3-appear 1s ease-in-out 3.1s forwards;
+    z-index: 50;
+  }
+  
+  @keyframes petal1-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-20px);
+      }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes petal2-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px) rotate(-65deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotate(-65deg);
+    }
+  }
+  
+  @keyframes petal3-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px) rotate(65deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotate(65deg);
+    }
+  }
+  
+  @keyframes stebel-grow {
+    0% {
+      transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  
+  .bg-message {
+    width: 0; /* Начальная ширина */
+    height: 100px; /* Высота блока */
+    margin: 0 auto; /* Центрирование блока */
+    margin-bottom: 50px; /* Отступ снизу */
+    background-color: #fefae0; /* Желтоватый белый цвет */
+    padding: 10px; /* Внутренние отступы */
+    font-family: "Marck Script", cursive; /* Шрифт */
+    font-weight: 400; /* Нормальный вес шрифта */
+    font-style: normal; /* Нормальный стиль шрифта */
+    font-size: 18px; /* Размер шрифта */
+    overflow: hidden; /* Скрывает переполнение */
+    animation: bg-anim 1s ease-in-out 3.1s forwards; /* Анимация */
+    animation-delay: 4s;
+  }
+  
+  @keyframes bg-anim {
+    0% {
+      width: 0; /* Начальная ширина */
+    }
+    100% {
+      width: 80%; /* Конечная ширина */
+    }
+  }
+  
+
+.txt-msg
+{
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  display: block; /* Изменяем на block для переноса строк */
+  overflow: hidden; /* Скрывает переполнение */
+  white-space: nowrap; /* Не переносит текст на новую строку */
+  animation: txt-writing 3s steps(60) forwards; /* Задаем длительность и количество шагов */
+  animation-delay: 5s;
+}
+
+
+@keyframes txt-writing {
+  0% {
+    width: 0;
+    opacity: 1; /* Сохраняем видимость текста */
+  }
+  100% {
+    width: 100%;
+    opacity: 1; /* Сохраняем видимость текста */
+  }
+}
+
+.gif-cont{
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
